@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HighchartsComponent } from './highcharts/highcharts.component';
+import { HighchartsChartModule } from "highcharts-angular";
+import { PollDataService } from './services/poll-data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighchartsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighchartsChartModule
   ],
-  providers: [],
+  providers: [PollDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
